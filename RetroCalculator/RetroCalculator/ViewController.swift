@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         case Multiply = "*"
         case Plus = "+"
         case Subtract = "-"
+        case Clear = "C"
         case Empty = "Empty"
     }
     
@@ -53,8 +54,16 @@ class ViewController: UIViewController {
     
     @IBAction func numberPressed(btn: UIButton){
         playSound()
+        if btn.tag == 10 {
+            result = ""
+            runningNumber = ""
+            currentOperation = Operation.Empty
+            
+            
+        } else {
+            runningNumber += "\(btn.tag)"
+        }
         
-        runningNumber += "\(btn.tag)"
         outputLable.text = runningNumber
         
     }
@@ -83,7 +92,7 @@ class ViewController: UIViewController {
         playSound()
         
         //User selected operation, but then selected another operation 
-        //without netering a first number
+        //without entering a first number
         if currentOperation != Operation.Empty {
             //Run some math
             if runningNumber != "" {
