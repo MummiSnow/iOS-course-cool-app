@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mvcTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XM-ph-Snh">
+                                <rect key="frame" x="171" y="98" width="247" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="247" id="fTt-ZJ-thr"/>
+                                    <constraint firstAttribute="height" constant="35" id="uMT-rf-JZx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="Evf-pd-QN2" customClass="RoundedImageView" customModule="mvcTest" customModuleProvider="target">
+                                <rect key="frame" x="180" y="281" width="240" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="O2V-Pd-cQL"/>
+                                    <constraint firstAttribute="height" constant="70" id="ef7-lE-zVb"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vez-Kk-9lc">
+                                <rect key="frame" x="180" y="192" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="KtL-Pj-Vpg"/>
+                                    <constraint firstAttribute="height" constant="30" id="rH7-Rn-jMM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUS-Ws-B3x">
+                                <rect key="frame" x="277" y="411" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Iz8-uq-dTY"/>
+                                    <constraint firstAttribute="width" constant="46" id="Jnv-Oa-4d4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="renamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rib-re-TYM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9XM-ph-Snh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="1ID-4A-eT0"/>
+                            <constraint firstItem="vez-Kk-9lc" firstAttribute="top" secondItem="9XM-ph-Snh" secondAttribute="bottom" constant="59" id="9UZ-7K-KvR"/>
+                            <constraint firstItem="dUS-Ws-B3x" firstAttribute="top" secondItem="Evf-pd-QN2" secondAttribute="bottom" constant="60" id="L2G-ZE-j1Y"/>
+                            <constraint firstItem="9XM-ph-Snh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QcR-Et-OcN"/>
+                            <constraint firstItem="vez-Kk-9lc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZa-5T-uYm"/>
+                            <constraint firstItem="Evf-pd-QN2" firstAttribute="centerX" secondItem="9XM-ph-Snh" secondAttribute="centerX" id="v7w-CK-DZW"/>
+                            <constraint firstItem="dUS-Ws-B3x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zga-mi-Oe6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fullName" destination="9XM-ph-Snh" id="but-UF-8J6"/>
+                        <outlet property="renameField" destination="vez-Kk-9lc" id="2Ho-lA-SJG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="506"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle 1" width="588" height="164"/>
+    </resources>
+</document>
